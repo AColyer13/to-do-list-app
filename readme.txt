@@ -64,7 +64,7 @@ Thank you for using the To-Do Application.
 - `add_item(todo_list)`: Adds a new task with description, category, and priority.
 - `view_items(todo_list)`: Displays all tasks with details.
 - `delete_item(todo_list)`: Removes a task by its number.
-- Main loop: Handles user interaction and calls the appropriate function.
+- Main: Handles user interaction and calls the appropriate function.
 - Functions are modular, with clear variable names and comments for easy maintenance and upgrades.
 
 ## 7. Testing & Demo Instructions
