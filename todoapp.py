@@ -25,7 +25,7 @@ def add_item(todo_list):
         if priority in ["High", "Medium", "Low"]:
             break
         print(Fore.RED + "Invalid priority. Please enter 'High', 'Medium', or 'Low'.")
-        
+
     todo_list.append({
         "description": desc,
         "category": category,
@@ -64,7 +64,7 @@ def delete_item(todo_list):
             except:
                 print(Fore.RED + "An error occurred while deleting. Please try again.")
 
-# Main loop: repeatedly prompt the user for actions until they choose to quit
+# Main: repeatedly prompt the user for actions until they choose to quit
 while True:
     try:
         print(Fore.CYAN + Style.BRIGHT + "Would you like to add, view, delete, or quit the program?")
