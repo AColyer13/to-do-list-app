@@ -15,14 +15,17 @@ def add_item(todo_list):
     if not desc:
         print(Fore.RED + "Invalid input. Description cannot be empty.")
         return
-    category = input(Fore.CYAN + "Enter category (Work/Personal): ").strip().capitalize()
-    if category not in ["Work", "Personal"]:
-        print(Fore.RED + "Invalid category. Defaulting to 'Personal'.")
-        category = "Personal"
-    priority = input(Fore.CYAN + "Enter priority (High/Medium/Low): ").strip().capitalize()
-    if priority not in ["High", "Medium", "Low"]:
-        print(Fore.RED + "Invalid priority. Defaulting to 'Low'.")
-        priority = "Low"
+    while True:
+        category = input(Fore.CYAN + "Enter category (Work/Personal): ").strip().capitalize()
+        if category in ["Work", "Personal"]:
+            break
+        print(Fore.RED + "Invalid category. Please enter 'Work' or 'Personal'.")
+    while True:
+        priority = input(Fore.CYAN + "Enter priority (High/Medium/Low): ").strip().capitalize()
+        if priority in ["High", "Medium", "Low"]:
+            break
+        print(Fore.RED + "Invalid priority. Please enter 'High', 'Medium', or 'Low'.")
+        
     todo_list.append({
         "description": desc,
         "category": category,
