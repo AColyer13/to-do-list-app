@@ -12,17 +12,20 @@ todo_list = [
 # Function to add an item to the to-do list
 def add_item(todo_list):
     desc = input(Fore.CYAN + "Enter the task description: ").strip()
-    if not desc:
-        print(Fore.RED + "Invalid input. Description cannot be empty.")
-        return
+        if not desc:
+            print(Fore.RED + "Invalid input. Description cannot be empty.")
+            return
+
     category = input(Fore.CYAN + "Enter category (Work/Personal): ").strip().capitalize()
-    if category not in ["Work", "Personal"]:
-        print(Fore.RED + "Invalid category. Defaulting to 'Personal'.")
-        category = "Personal"
+        if category not in ["Work", "Personal"]:
+            print(Fore.RED + "Invalid category. Defaulting to 'Personal'.")
+            category = "Personal"
+
     priority = input(Fore.CYAN + "Enter priority (High/Medium/Low): ").strip().capitalize()
-    if priority not in ["High", "Medium", "Low"]:
-        print(Fore.RED + "Invalid priority. Defaulting to 'Low'.")
-        priority = "Low"
+        if priority not in ["High", "Medium", "Low"]:
+            print(Fore.RED + "Invalid priority. Defaulting to 'Low'.")
+            priority = "Low"
+
     todo_list.append({
         "description": desc,
         "category": category,
